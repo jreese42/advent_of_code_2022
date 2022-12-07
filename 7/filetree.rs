@@ -64,8 +64,7 @@ fn main() -> io::Result<()> {
 
     //So now we have a list of every absolute file path with a size
 
-    //get this of list to check by looking at every file we know and getting the parent tree all the way up
-    //this is naieve, we end up with lots of duplicates but whatever, it works well enough
+    //get a path list to check by looking at every file we know and getting the parent tree all the way up
     for pair in file_sizes.iter() {
         let mut path = pair.0.clone();
         while let Some(_x) = path.parent()  {
